@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { 
   AppBar, 
@@ -11,16 +11,29 @@ import SideDrawer from './SideDrawer'
 
 function Header() {
   const [ drawerOpen, setDrawerOpen ] = useState(false)
+  const [ headerShow, setHeaderShow ] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
 
   const toggleDrawer = value => {
     setDrawerOpen(value)
+  }
+
+  const handleScroll = () => {
+    if(window.scrollY > 0) {
+      setHeaderShow(true)
+    } else {
+      setHeaderShow(false)
+    }
   }
 
   return (
     <AppBar
       position="fixed"
       style={{
-        backgroundColor: '#2f2f2f',
+        backgroundColor: headerShow ? '#2f2f2f' : 'transparent',
         boxShadow: 'none',
         padding: '10px 0px',
       }}
