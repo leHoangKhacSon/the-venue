@@ -27,7 +27,7 @@ function Carrousel() {
             className="carrousel_image"
             style={{
               backgroundImage: `url(${slide_one})`,
-              height: `${window.innerHeight}px`
+              height: `${window.innerHeight}px`,
             }}
           >
           </div>
@@ -37,7 +37,7 @@ function Carrousel() {
             className="carrousel_image"
             style={{
               backgroundImage: `url(${slide_two})`,
-              height: `${window.innerHeight}px`
+              height: `${window.innerHeight}px`,
             }}
           >
           </div>
@@ -47,7 +47,7 @@ function Carrousel() {
             className="carrousel_image"
             style={{
               backgroundImage: `url(${slide_three})`,
-              height: `${window.innerHeight}px`
+              height: `${window.innerHeight}px`,
             }}
           >
           </div>

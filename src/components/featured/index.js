@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Carrousel from './Carrousel'
+import TimeUtils from './TimeUtils'
 
 function Featured() {
   return (
@@ -11,6 +12,7 @@ function Featured() {
           Ariana Grande
         </div>
       </div>
+      <TimeUtils />
     </div>
   )
 }
