@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { 
   AppBar, 
-  Toolbar, 
-  Menu as MenuIcon, 
+  Toolbar,    
   IconButton, 
 } from '@material-ui/core'
+import { Menu as MenuIcon } from '@material-ui/icons'
+
+import SideDrawer from './SideDrawer'
 
 function Header() {
+  const [ drawerOpen, setDrawerOpen ] = useState(false)
+
+  const toggleDrawer = value => {
+    setDrawerOpen(value)
+  }
+
   return (
     <AppBar
       position="fixed"
@@ -26,6 +34,17 @@ function Header() {
             Music Events
           </div>
         </div>
+        <IconButton
+          aria-label="Menu"
+          color="inherit"
+          onClick={() => toggleDrawer(true)}
+        >
+          <MenuIcon />
+        </IconButton>
+        <SideDrawer 
+          open={drawerOpen}
+          onClose={value => toggleDrawer(value)}
+        />
       </Toolbar>
     </AppBar>
   )
