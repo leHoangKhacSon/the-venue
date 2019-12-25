@@ -4,6 +4,7 @@ import './resources/styles.css'
 import Header from './components/header_footer/Header'
 import Featured from './components/featured'
 import VunueNfo from './components/venueNfo'
+import Highlight from './components/highlights'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Featured />
       <VunueNfo />
+      <Highlight />
     </div>
   );
 }
