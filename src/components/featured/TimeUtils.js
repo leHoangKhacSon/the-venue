@@ -14,7 +14,7 @@ function TimeUtils() {
     return () => {
       clearInterval(idInterval)
     }
-  }, [])
+  }, [deadline])
 
   const getTimeUntil = deadline => {
     const time = Date.parse(deadline) - Date.parse(new Date())
