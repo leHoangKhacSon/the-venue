@@ -6,6 +6,8 @@ import Featured from './components/featured'
 import VunueNfo from './components/venueNfo'
 import Highlight from './components/highlights'
 import Pricing from './components/pricing'
+import Location from './components/location'
+import Footer from './components/header_footer/Footer'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <VunueNfo />
       <Highlight />
       <Pricing />
+      <Location />
+      <Footer />
     </div>
   );
 }
